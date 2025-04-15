@@ -1,7 +1,7 @@
-FROM registry.access.redhat.com/ubi9/nodejs-18
+FROM registry.redhat.io/rhel8/nodejs-18-runtime
 
-COPY . /opt/app-root/src
-WORKDIR /opt/app-root/src
+COPY . /tmp
+WORKDIR /tmp
 
 USER 0
 RUN ./build-docs.sh
