@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/ubi9/nodejs-20
 COPY . /opt/app-root/src
 WORKDIR /opt/app-root/src
 
-RUN ./tools/build-docs.sh
+RUN ./build-docs.sh
 
 EXPOSE 8080
 
