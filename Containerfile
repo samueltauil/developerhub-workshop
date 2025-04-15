@@ -1,4 +1,4 @@
-FROM registry.redhat.io/rhel8/nodejs-18-runtime
+FROM registry.redhat.io/rhel9/nodejs-18-minimal
 
 COPY . /tmp
 WORKDIR /tmp
