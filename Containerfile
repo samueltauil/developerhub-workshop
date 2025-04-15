@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9/nodejs-20
+FROM registry.access.redhat.com/ubi9/nodejs-18
 
 COPY . /opt/app-root/src
 WORKDIR /opt/app-root/src
