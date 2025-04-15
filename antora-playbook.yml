@@ -8,6 +8,7 @@ content:
     - url: https://github.com/samueltauil/developerhub-workshop.git
       edit_url: false
       branches: HEAD
+      start_path: docs 
 ui:
   bundle:
     url: https://gitlab.com/redhat-docs/redhat-antora-ui/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
