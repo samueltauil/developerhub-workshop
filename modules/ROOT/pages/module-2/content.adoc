@@ -1,0 +1,63 @@
+== Module 2: Using Red Hat Dev Spaces
+
+Git Repository: https://github.com/pkredhat/nb-workshop/tree/module2-python
+
+Inside your workspace is a simple Python Flask app that returns a "hello world" based on the selected language.
+
+- Country code (e.g., `countrycode=IT`) determines the language (e.g., "ciao mondo")
+- Mappings are found in `translate.json`
+- Includes a timestamp
+
+=== Tasks
+. Install dependencies:
++
+[source,sh]
+----
+pip install -r requirements.txt
+----
+
+. Set environment variables:
++
+[source,sh]
+----
+export FLASK_APP=app.py
+export FLASK_ENV=development
+export PYTHONPATH=.
+----
+
+. Format the timestamp to **Eastern Standard Time (New York)**
+. Display timestamp as `{HH:MM MM/DD/YYYY}`
+. Write a test case to verify timezone and format
+
+. Create new GET route `/api/query`:
+  * Accept `countryCode` query param (e.g. `/api/query?countryCode=en`)
+  * Return correct greeting based on country code
+
+. Run the App:
++
+[source,sh]
+----
+flask run --host=0.0.0.0 --port=8080
+----
+
+. Run tests:
++
+[source,sh]
+----
+./pytest
+----
+
+=== Bonus Tasks
+* Add `/api/magic8` endpoint to return a random greeting
+* Add POST variant for `/api/query`
+* Add stylesheet to change background to blue (in `/static/styles.css`)
+* Wrap greeting in `<blockquote>` and style it using `/templates` and `render_template`
+
+=== Easter Eggs
+There is a 2-step Golden Egg easter egg in the code.
+
+=== Takeaways
+* First look at Dev Spaces
+* Python App setup in container
+* Use of environment variables
+* First OpenShift Service / Route

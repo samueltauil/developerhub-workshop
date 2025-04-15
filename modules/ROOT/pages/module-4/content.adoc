@@ -1,0 +1,24 @@
+== Module 4: Creating and Deploying Your First Serverless Function
+
+App can scale to zero when idle using Red Hat Serverless.
+
+=== Steps
+. Install dependencies:
++
+[source,sh]
+----
+pip install -r requirements.txt
+----
+
+. Run the Flask App:
++
+[source,sh]
+----
+flask run --host=0.0.0.0 --port=8080
+----
+
+=== Takeaways
+* First use of Red Hat Serverless scale-to-zero
+* Internal repo with OpenShift Image Streams
+* Image tagging and blue/green deployment
+* Observed auto-scaling in action

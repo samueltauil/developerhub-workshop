@@ -1,0 +1,43 @@
+== Module 3: Managing Your Container Workspace
+
+Git Repository: https://github.com/pkredhat/nb-workshop/tree/module3-python
+
+Application connects to OpenShift Kafka Cluster.
+
+=== Commands
+[source,sh]
+----
+# Run the producer
+python producer.py --topic <name_of_topic>
+
+# Run the consumer
+python consumer.py --topic <name_of_topic>
+
+# Run the WebApp
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+----
+
+=== Tasks
+* Install dependencies: `pip install -r requirements.txt`
+* Set `KAFKA_BOOTSTRAP_SERVERS` env variable
+* Reference: https://devfile.io/docs/2.3.0/quickstart-che
+* Create `devfile.yaml`:
+  - Use `registry.access.redhat.com/ubi9/python-39:1-1739420387`
+  - Configure memory and CPU
+* Create build and run tasks for `producer.py`, `consumer.py`, `main.py`
+* Set topic to `nb-today`
+* Verify messages pass through producer → consumer → webapp
+
+=== Bonus Tasks
+* Add devfile tasks to `tasks.json`
+* Load Python extensions into `.vscode/extensions.json`
+* Write unit tests with mocks for Kafka producer
+
+=== Easter Eggs
+Look through the code and solve the hidden easter egg!
+
+=== Takeaways
+* Created first `devfile`
+* Configured Dev Spaces/ODO workspace
+* Customized VSCode environment
+* Kafka & EDA fundamentals

@@ -1,0 +1,15 @@
+= DeveloperHub Workshop
+:navtitle: DeveloperHub Workshop
+:page-layout: default
+
+== Module 1: Introduction to Developer Hub
+
+=== Discover and Reuse
+* Discover and reuse services, templates, documentation, and tools
+* Standardize software delivery processes
+* Integrate CI/CD pipelines, observability, security, and more
+* Reduce cognitive load by giving devs a "home base"
+
+=== Guided Walkthrough
+* Software Catalog: Browse and manage all your apps, services, APIs, and components
+* Golden Paths (Software Templates): Quickly scaffold new projects using company-approved standards

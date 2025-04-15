@@ -1,0 +1,56 @@
+== Module 5: Deploying the Application
+
+Git Repository: https://github.com/pkredhat/nb-workshop/tree/module5-python
+
+App listens on `/api/check` and returns HTTP 200/500 based on payload.
+
+=== Deploy
+[source,sh]
+----
+oc new-app --name nb-workshop-<your username> .
+----
+
+=== OpenTelemetry Configuration
+* Deploy sidecar:
++
+[source,sh]
+----
+oc apply -f manifests/sidecar.yaml
+----
+
+* Create `instrumentation.yaml`:
++
+[source,sh]
+----
+oc apply -f manifests/instrumentation.yaml
+----
+
+* Annotate deployment:
+[source,yaml]
+----
+spec:
+  template:
+    metadata:
+      annotations:
+        instrumentation.opentelemetry.io/inject-python: "true"
+        sidecar.opentelemetry.io/inject: sidecar
+----
+
+=== Fix CronJob
+* Modify env var `ENDPOINT` in `curl-cron/cronjob.yaml` to match service name
+* Apply it:
+[source,sh]
+----
+oc apply -f curl-cron/cronjob.yaml
+----
+
+* View traces in Jaeger UI:
+https://tempo-sample-query-frontend-observability.apps.nb-demo-01.6jz4.p1.openshiftapps.com/
+
+=== Note
+* The cronjob currently triggers a 500 — fix it to return 200
+* To clean up:
+[source,sh]
+----
+oc delete deployment,service,is,bc nb-workshop-<your username>
+----
