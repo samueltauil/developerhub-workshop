@@ -2,7 +2,6 @@ name: developerhub-workshop
 title: DeveloperHub Workshop
 version: main 
 nav: 
-- modules/ROOT/nav.adoc
 - modules/module-one/nav.adoc
 - modules/module-two/nav.adoc
 - modules/module-three/nav.adoc
