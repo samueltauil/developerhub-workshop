@@ -8,7 +8,7 @@
     },
     "scripts": {
       "install-build": "npm i && npx antora antora-playbook.yml --stacktrace",
-      "build": "npx antora antora-playbook.yml --stacktrace"
+      "build": "npm i && npx antora antora-playbook.yml --stacktrace"
     },
     "keywords": [
       "Openshift",
