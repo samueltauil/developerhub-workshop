@@ -23,6 +23,8 @@ asciidoc:
 
 network:
   no_proxy: '*'
-
+  http_proxy: ''
+  https_proxy: ''
+  
 output:
   dir: ./site
