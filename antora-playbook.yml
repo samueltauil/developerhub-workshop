@@ -1,6 +1,6 @@
 site:
   title: "DeveloperHub Workshop"
-  start_page: "ROOT/pages/intro.adoc"  # Main page file
+  start_page: "modules/ROOT/pages/module-1-content.adoc"  # Main page file
   url: "https://your-developerhub-url"  # Optional: Customize if needed
 
 content:
