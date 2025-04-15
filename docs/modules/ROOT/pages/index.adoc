@@ -1,6 +1,9 @@
-= Overview
+= Welcome to the Red Hat Developer Hub Workshop
 
-[IMPORTANT]
-====
-Overview of the Workshop description
-====
+== Greetings!
+
+Welcome to the Red Hat Developer Hub Workshop! We're excited to have you join us as we dive into modern software development workflows, tools, and best practices using Developer Hub.
+
+== Let's Get Started!
+
+Look around, explore the features, and don't hesitate to ask questions. By the end of this workshop, you'll have a solid understanding of how Red Hat Developer Hub can simplify and accelerate your development process.
