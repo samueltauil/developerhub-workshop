@@ -21,3 +21,5 @@ asciidoc:
     idseparator: '-'
     page-pagination: ''
 
+output:
+  dir: ./site
