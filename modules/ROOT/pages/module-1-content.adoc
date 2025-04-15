@@ -1,3 +1,5 @@
+:page-layout: default
+
 == Module 1: Introduction to Developer Hub
 
 === Discover and Reuse

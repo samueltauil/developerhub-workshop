@@ -1,13 +1,13 @@
 site:
   title: "DeveloperHub Workshop"
-  start_page: "modules/ROOT/pages/module-1-content.adoc"  # Main page file
+  start_page: docs::index.adoc  # Main page file
   url: "https://your-developerhub-url"  # Optional: Customize if needed
 
 content:
   sources:
-    - url: ./modules/ROOT/pages  # Local path for the content
-      start_path: .  # Root path inside modules/ROOT/pages
-
+    - url: ./
+      branches:
+        - HEAD
 ui:
   bundle:
     url: https://gitlab.com/redhat-docs/redhat-antora-ui/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
