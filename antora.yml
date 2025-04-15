@@ -3,6 +3,6 @@ title: DeveloperHub Workshop
 version: main
 display_version: main 
 prerelease: false
-start_page: module-1-content.adoc
+start_ROOT: 'ROOT:index.adoc'
 nav:
   - modules/ROOT/nav.adoc

@@ -1,4 +1,4 @@
-:page-layout: default
+:page-layout: "default"
 
 == Module 1: Introduction to Developer Hub
 
