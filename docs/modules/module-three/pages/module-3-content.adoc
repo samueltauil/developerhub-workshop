@@ -1,43 +1,92 @@
 == Module 3: Managing Your Container Workspace
+:navtitle: Managing Your Container Workspace
 
-Git Repository: https://github.com/pkredhat/nb-workshop/tree/module3-python
+GIT Repository: https://github.com/pkredhat/nb-workshop/tree/module3-python
 
-Application connects to OpenShift Kafka Cluster.
+Inside this workspace is a Python application that connects to an OpenShift Kafka Cluster. There are three commands you can run from within the application:
 
-=== Commands
+== Run the Producer
+
 [source,sh]
 ----
-# Run the producer
 python producer.py --topic <name_of_topic>
+----
 
-# Run the consumer
+== Run the Consumer
+
+[source,sh]
+----
 python consumer.py --topic <name_of_topic>
+----
 
-# Run the WebApp
+== Run the WebApp
+
+[source,sh]
+----
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ----
 
-=== Tasks
-* Install dependencies: `pip install -r requirements.txt`
-* Set `KAFKA_BOOTSTRAP_SERVERS` env variable
-* Reference: https://devfile.io/docs/2.3.0/quickstart-che
-* Create `devfile.yaml`:
-  - Use `registry.access.redhat.com/ubi9/python-39:1-1739420387`
-  - Configure memory and CPU
-* Create build and run tasks for `producer.py`, `consumer.py`, `main.py`
-* Set topic to `nb-today`
-* Verify messages pass through producer → consumer → webapp
+== Tasks
 
-=== Bonus Tasks
-* Add devfile tasks to `tasks.json`
-* Load Python extensions into `.vscode/extensions.json`
-* Write unit tests with mocks for Kafka producer
+The application has some problems that we would like you to fix:
 
-=== Easter Eggs
-Look through the code and solve the hidden easter egg!
+. Run the following to install the necessary dependencies:
++
+[source,sh]
+----
+pip install -r requirements.txt
+----
 
-=== Takeaways
-* Created first `devfile`
-* Configured Dev Spaces/ODO workspace
-* Customized VSCode environment
-* Kafka & EDA fundamentals
+. Set the `KAFKA_BOOTSTRAP_SERVERS` environment variable based on the Kafka cluster you created.
+
+. Open the following link in a separate browser window as a reference:
+https://devfile.io/docs/2.3.0/quickstart-che
+
+. Create a new `devfile.yaml` in the project root.
+
+. Configure the following:
+  * Point to the Python UBI image: `registry.access.redhat.com/ubi9/python-39:1-1739420387`
+  * Set memory and CPU limits
+  * Avoid using CLI tools from now on
+
+. Define the following devfile tasks:
+  * **Build task** for dependency installation
+  * **Run task** for `consumer.py`
+  * **Run task** for `producer.py`
+  * **Run task** for `main.py`
+
+. Ensure `KAFKA_BOOTSTRAP_SERVERS` is set correctly in the environment.
+
+. Create a new topic in the producer command named `nb-today`.
+
+. Add 7-8 messages into the `nb-today` topic.
+
+. Run the consumer command and point it to `nb-today`.
+
+. Verify that messages are funnelling through.
+
+. Run the web application. (If you have created a run command for `main.py`, use it.)
+
+. In the topic input field, enter `nb-today` and verify the messages are flowing through the UI.
+
+== Bonus Tasks
+
+* Add your devfile tasks to `tasks.json`
+* Load 3 Python extensions into `.vscode/extensions.json`
+* Write a few small unit tests using mocks for the Kafka producer to verify:
+  ** Input handling
+  ** Retry mechanisms
+  ** Functionality without needing a real Kafka cluster
+
+== Easter Eggs!
+
+* There is an easter egg in the code.
+* Be thorough! Look through the code carefully.
+
+== Takeaways
+
+* Built your first `devfile.yaml`
+* Configured your Dev Spaces / Odo workspace
+* Customized your VSCode environment
+* First interaction with **Streams for Apache Kafka**
+* Learned introductory patterns around **Event-Driven Architecture**

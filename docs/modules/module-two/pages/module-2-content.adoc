@@ -1,63 +1,95 @@
 == Module 2: Using Red Hat Dev Spaces
+:navtitle: Using Red Hat Dev Spaces
 
-Git Repository: https://github.com/pkredhat/nb-workshop/tree/module2-python
+GIT Repository: https://github.com/pkredhat/nb-workshop/tree/module2-python
 
-Inside your workspace is a simple Python Flask app that returns a "hello world" based on the selected language.
+Inside your workspace is a very simple Python application built using Flask. The application returns a “hello world” message based on the language selected using a country code.
 
-- Country code (e.g., `countrycode=IT`) determines the language (e.g., "ciao mondo")
-- Mappings are found in `translate.json`
-- Includes a timestamp
+- The country is specified using a 2-letter country code.  
+  Example: `countryCode=IT` returns `ciao mondo` (IT = Italy)
+- All translations are defined in the `translate.json` file.
+- The message also includes a timestamp.
 
-=== Tasks
-. Install dependencies:
+== Fix the Application
+
+Perform the following tasks to fix and improve the application:
+
+. Install the required dependencies:
 +
 [source,sh]
 ----
 pip install -r requirements.txt
 ----
 
-. Set environment variables:
+. Set the following environment variables (needed for `pytest` to work):
 +
 [source,sh]
 ----
-export FLASK_APP=app.py
-export FLASK_ENV=development
-export PYTHONPATH=.
+FLASK_APP=app.py
+FLASK_ENV=development
+PYTHONPATH=.
 ----
 
-. Format the timestamp to **Eastern Standard Time (New York)**
-. Display timestamp as `{HH:MM MM/DD/YYYY}`
-. Write a test case to verify timezone and format
+. Format the hello world timestamp:
+  * Use Eastern Standard Time (New York)
+  * Display format: `{HH:MM MM/DD/YYYY}`
 
-. Create new GET route `/api/query`:
-  * Accept `countryCode` query param (e.g. `/api/query?countryCode=en`)
-  * Return correct greeting based on country code
+. Write a test case that verifies:
+  * Timezone correctness
+  * New date format correctness
 
-. Run the App:
+. In `/routes/main.py`, create a new route:
+  * Endpoint: `/api/query`
+  * Method: `GET`
+  * Append a query string to accept a `countryCode` parameter (e.g., `/api/query?countryCode=en`)
+  * Return the correct greeting based on the given country code
+
+== Final Compilation
+
+. Run the Flask app using the following command:
 +
 [source,sh]
 ----
 flask run --host=0.0.0.0 --port=8080
 ----
 
-. Run tests:
+. Open a second terminal and run `pytest` to ensure test cases pass:
 +
 [source,sh]
 ----
 ./pytest
 ----
 
-=== Bonus Tasks
-* Add `/api/magic8` endpoint to return a random greeting
-* Add POST variant for `/api/query`
-* Add stylesheet to change background to blue (in `/static/styles.css`)
-* Wrap greeting in `<blockquote>` and style it using `/templates` and `render_template`
+== Bonus Tasks
 
-=== Easter Eggs
-There is a 2-step Golden Egg easter egg in the code.
+* Add a new endpoint `/api/magic8`:
+  * Returns a random country code
+  * Returns the corresponding greeting (like a magic 8-ball)
 
-=== Takeaways
-* First look at Dev Spaces
-* Python App setup in container
-* Use of environment variables
-* First OpenShift Service / Route
+* Write additional tests for:
+  * `/api/query`
+  * `/api/magic8`
+
+* Add an additional `/api/query` endpoint using `POST` instead of `GET`.
+  * Use `curl` to test the POST functionality.
+
+* Add styling and HTML enhancements:
+  ** Attach a simple stylesheet to change the background color to blue
+  ** Wrap the "hello world" message in a `<blockquote>` tag
+  ** Use `render_template()` to serve HTML
+  ** Place your stylesheet in a `/static` folder
+  ** Place your HTML files in a `/templates` folder
+
+== Easter Eggs!
+
+* There is an easter egg in the code.
+* Be thorough and review the code carefully.
+* Try to find and solve the Golden Egg! (Hint: it’s a two-step process)
+
+== Takeaways
+
+* First look at **Red Hat Dev Spaces**
+* Set up a Python Flask application inside Dev Spaces
+* Leveraged Dev Spaces' quick container-based app builds
+* Utilized environment variables within your app
+* Created and accessed your first OpenShift service and route

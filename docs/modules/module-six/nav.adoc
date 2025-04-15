@@ -1,1 +1,1 @@
-* xref:module-6-content.adoc[Worksheet]
+* xref:module-6-content.adoc[Red Hat OpenShift AI]

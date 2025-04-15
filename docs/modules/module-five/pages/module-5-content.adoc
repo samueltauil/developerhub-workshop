@@ -1,4 +1,4 @@
-= Module 5 Worksheet
+== Module 5: Deploying the Application
 :navtitle: Deploying the Application
 
 GIT Repository: https://github.com/pkredhat/nb-workshop/tree/module5-python
