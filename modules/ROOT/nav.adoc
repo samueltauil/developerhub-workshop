@@ -1,6 +1,0 @@
-* xref:module-1-content.adoc[Introduction to Developer Hub]
-* xref:module-2-content.adoc[Using Red Hat Dev Spaces]
-* xref:module-3-content.adoc[Managing Your Container Workspace]
-* xref:module-4-content.adoc[Creating and Deploying Your First Serverless Function]
-* xref:module-5-content.adoc[Deploying the Application]
-* xref:module-6-content.adoc[Worksheet]

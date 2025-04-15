@@ -1,12 +1,12 @@
 site:
   title: "DeveloperHub Workshop"
-  start_page: ROOT::module-1-content.adoc  # Main page file
-  url: "https://your-developerhub-url"  # Optional: Customize if needed
+  start_page: developerhub-workshop::index.adoc
+  #url: "https://your-developerhub-url"
 
 content:
   sources:
-    - url: .
-      edit_url: ~
+    - url: https://github.com/samueltauil/developerhub-workshop.git
+      edit_url: false
       branches: HEAD
 ui:
   bundle:
@@ -15,6 +15,8 @@ ui:
 
 asciidoc:
   attributes:
-    toc: true
-    icons: font
-    sectanchors: true
+    experimental: ''
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: ''
+
