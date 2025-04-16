@@ -1,9 +1,26 @@
-= Welcome to the Red Hat Developer Hub Workshop
+= Neuberger Berman Gamification Workshop
 
 == Greetings!
 
-Welcome to the Red Hat Developer Hub Workshop! We're excited to have you join us as we dive into modern software development workflows, tools, and best practices using Developer Hub.
+Welcome to the Red Hat Developer Gamification Workshop!  We're excited to have you join us as we dive into modern software development workflows, tools, and best practices using the Red Hat development stack.
 
 == Let's Get Started!
 
-Look around, explore the features, and don't hesitate to ask questions. By the end of this workshop, you'll have a solid understanding of how Red Hat Developer Hub can simplify and accelerate your development process.
+Look around, explore the features, and don't hesitate to ask questions. By the end of this workshop, you'll have a solid understanding of how the Red Hat development stack can simplify and accelerate your development process.
+
+== The Classroom
+
+For this workshop, you'll be using several tools which you can familiarize yourself with.  
+Shortcuts to the tools are also available from the OpenShift web console's *Application Menu* (top right corner) and the *Developer Hub* homepage.
+
+*OpenShift web console:*  
+https://console-openshift-console.apps.nb-demo-01.6jz4.p1.openshiftapps.com/
+
+*Developer Hub:*  
+https://backstage-developer-hub-backstage.apps.nb-demo-01.6jz4.p1.openshiftapps.com/
+
+*Dev Spaces:*  
+https://devspaces.apps.nb-demo-01.6jz4.p1.openshiftapps.com/dashboard/
+
+*Jaeger UI:*  
+https://tempo-sample-query-frontend-observability.apps.nb-demo-01.6jz4.p1.openshiftapps.com/
