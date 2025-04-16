@@ -1,1 +1,1 @@
-* xref:module-5-content.adoc[Deploying the Application]
+* xref:module-5-content.adoc[Using OpenShift Telemetry]
