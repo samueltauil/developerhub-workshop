@@ -8,32 +8,38 @@ This module includes two hands-on exercises:
 
 == Exercise 1: RAG Application with vLLM Inference Server
 
-Access the RAG demo application at the following URL:
-
+. Access the RAG demo application at the following URL:
 https://prod-streamlit-finance-agent.apps.cluster-922vm.922vm.sandbox3207.opentlc.com/
-
-Steps:
-
++
 . Review the set of articles used to create the grounding dataset.
 . Ask the chatbot questions related to the grounding documents.
 . Observe the response times and overall performance.
 
 == Exercise 2: Agentic AI Workflow in OpenShift AI Workbenches
 
-. Access your personal OpenShift AI workbench using the link provided in the spreadsheet.
+. Login to Red Hat OpenShift AI at the following URL:  
+https://rhods-dashboard-redhat-ods-applications.apps.cluster-922vm.922vm.sandbox3207.opentlc.com/
+
+. Authenticate using your personal login credentials provided in the spreadsheet.
+
+. Access your personal OpenShift AI Workbench:
+  * Click *Data Science Projects* from the left navigation menu.
+  * Select the project that corresponds to your username.
+  * Click the *Workbenches* tab in the upper navigation menu.
+  * Locate the `agentic-workbench` and click **Open** on the far right.
+
 . Walk through the notebook:
-  * Read the cell descriptions to understand the application’s purpose and flow.
+  * Read the cell descriptions to understand the application's purpose and flow.
   * Run each cell and review the outputs.
 
-In the final cell:
+. In the final cell:
+  * Review the list of articles retrieved by the agent.
+  * Examine how this information is used to generate a finance article.
 
-* Review the list of articles retrieved by the agent.
-* Examine how this information is used to generate a finance article.
+. Once you've completed the workflow:
+  * Try modifying parts of the code (e.g., prompt templates, model temperature, and prompt query).
+  * Observe how these changes impact the generated output.
 
-Once you’ve completed the workflow:
-
-* Try modifying parts of the code (e.g., prompt templates, model temperature, and prompt query).
-* Observe how these changes impact the generated output.
 
 == Takeaways
 
@@ -41,4 +47,4 @@ Once you’ve completed the workflow:
 * Self-hosting LLMs with vLLM gives teams greater control over data privacy and usage compared to using a third-party LLM service or application.
 * OpenShift AI provides a powerful and consistent AI/ML platform for data science and development teams to build and deploy intelligent applications.
 * Built on OpenShift, OpenShift AI accelerates the delivery of AI applications from proof of concept to production.
-* Key features of OpenShift AI include Jupyter notebooks, GPU-ready environments, cloud-first model serving, pipelines, and model monitoring.
+
