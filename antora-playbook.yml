@@ -13,7 +13,8 @@ ui:
   bundle:
     url: https://gitlab.com/redhat-docs/redhat-antora-ui/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
-
+  supplemental_files: ./supplemental_ui
+  
 asciidoc:
   attributes:
     experimental: ''
@@ -21,10 +22,5 @@ asciidoc:
     idseparator: '-'
     page-pagination: ''
 
-network:
-  no_proxy: '*'
-  http_proxy: ''
-  https_proxy: ''
-  
 output:
   dir: ./site

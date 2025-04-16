@@ -1,0 +1,27 @@
+<header class="header"></header>
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <ul class="navbar-brand-list">
+          <li>
+            <a class="navbar-brand rh-documentation" href="{{site.url}}/index.html">
+              <img src="{{{uiRootPath}}}/img/Red-Hat-Documentation-A-Reverse-RGB.svg" alt="Home" class="rh-docs" />
+            </a>
+          </li>
+        </ul>
+
+        {{#if env.SITE_SEARCH_PROVIDER}}
+        <div class="navbar-item search hide-for-print">
+          <div id="search-field" class="field">
+            <input id="search-input" type="text" placeholder="Search the docs..." {{#if page.home}} autofocus{{/if}}>
+          </div>
+        </div>
+        {{/if}}
+        <button class="navbar-burger" data-target="topbar-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
