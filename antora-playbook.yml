@@ -1,6 +1,6 @@
 site:
-  title: "DeveloperHub Workshop"
-  start_page: developerhub-workshop::index.adoc
+  title: "Gamification Workshop"
+  start_page: gamification-workshop::index.adoc
   #url: "https://your-developerhub-url"
 
 content:
@@ -14,7 +14,7 @@ ui:
     url: https://gitlab.com/redhat-docs/redhat-antora-ui/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
   supplemental_files: ./supplemental_ui
-  
+
 asciidoc:
   attributes:
     experimental: ''

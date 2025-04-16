@@ -1,5 +1,5 @@
-name: developerhub-workshop
-title: DeveloperHub Workshop
+name: gamification-workshop
+title: Gamification Workshop
 version: main 
 nav: 
 - modules/ROOT/nav.adoc
