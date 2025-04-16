@@ -1,27 +1,32 @@
 == Module 2: Using Red Hat Dev Spaces
 :navtitle: Using Red Hat Dev Spaces
 
-GIT Repository: https://github.com/pkredhat/nb-workshop/tree/module2-python
+== Git Repositories 
 
-Inside your workspace is a very simple Python application built using Flask. The application returns a “hello world” message based on the language selected using a country code.
+*Python:* https://github.com/pkredhat/nb-workshop/tree/module2-python 
 
-- The country is specified using a 2-letter country code.  
-  Example: `countryCode=IT` returns `ciao mondo` (IT = Italy)
-- All translations are defined in the `translate.json` file.
-- The message also includes a timestamp.
+*Dotnet:* https://github.com/pkredhat/nb-workshop/tree/module2-dotnet
 
-== Fix the Application
+== Objectives
+Inside your workspace is a very simple Python application built using Flask. The application returns a “hello world” message based on the language you choose for it.
 
-Perform the following tasks to fix and improve the application:
+. The country is based on a 2-letter country code.  
+.. i.e `countryCode=IT` returns `ciao mondo` (IT is for Italy)
+. You can find all the mappings in the `translate.json` file.
+. There is also a timestamp after the “hello world” message.
 
-. Install the required dependencies:
+== Guided Exercise
+
+The application has some problems that we would like you to fix:
+
+. Run the following command to install the necessary dependencies:
 +
 [source,sh]
 ----
 pip install -r requirements.txt
 ----
 
-. Set the following environment variables (needed for `pytest` to work):
+. Your tests will not run with `pytest` because your environment variables are not set. Please set the following environment variables:
 +
 [source,sh]
 ----
@@ -30,30 +35,27 @@ FLASK_ENV=development
 PYTHONPATH=.
 ----
 
-. Format the hello world timestamp:
-  * Use Eastern Standard Time (New York)
-  * Display format: `{HH:MM MM/DD/YYYY}`
+. Format the `hello` timestamp to use Eastern Standard Time (New York time).
 
-. Write a test case that verifies:
-  * Timezone correctness
-  * New date format correctness
+. Format the `hello` timestamp to display as `{HH:MM MM/DD/YYYY}`.
 
-. In `/routes/main.py`, create a new route:
-  * Endpoint: `/api/query`
-  * Method: `GET`
-  * Append a query string to accept a `countryCode` parameter (e.g., `/api/query?countryCode=en`)
-  * Return the correct greeting based on the given country code
+. Write a test case that tests both the timezone and the new date format.
+
+. In `/routes/main.py`, create a new route that will respond to `/api/query`:
+  * The request should use the `GET` method.
+  * Append a query string to take an argument for the country code (e.g. `/api/query?countryCode=en`).
+  * Set the API to return the correct greeting based on the country code used in the query string.
 
 == Final Compilation
 
-. Run the Flask app using the following command:
+. In a new terminal, run the app using Flask (not Python) with the following settings:
 +
 [source,sh]
 ----
 flask run --host=0.0.0.0 --port=8080
 ----
 
-. Open a second terminal and run `pytest` to ensure test cases pass:
+. Open a second terminal and run `pytest` to ensure all test cases are passing:
 +
 [source,sh]
 ----
@@ -62,23 +64,21 @@ flask run --host=0.0.0.0 --port=8080
 
 == Bonus Tasks
 
-* Add a new endpoint `/api/magic8`:
-  * Returns a random country code
-  * Returns the corresponding greeting (like a magic 8-ball)
+* Add an `/api/magic8` endpoint that returns a random country code (like a magic 8-ball) and returns a random "Hello World" greeting.
 
-* Write additional tests for:
-  * `/api/query`
-  * `/api/magic8`
+* Write additional tests for `/api/query` and `/api/magic8`.
 
-* Add an additional `/api/query` endpoint using `POST` instead of `GET`.
-  * Use `curl` to test the POST functionality.
+* Add an additional endpoint for `/api/query` which functions the same but uses `POST` instead. Use `curl` to test it.
 
-* Add styling and HTML enhancements:
-  ** Attach a simple stylesheet to change the background color to blue
-  ** Wrap the "hello world" message in a `<blockquote>` tag
-  ** Use `render_template()` to serve HTML
-  ** Place your stylesheet in a `/static` folder
-  ** Place your HTML files in a `/templates` folder
+* Attach a simple stylesheet that will change the background color to blue.
+
+* Put the "Hello World" message inside an HTML `<blockquote>` tag. Add color styling in the stylesheet to emphasize the blockquote area.
++
+Use `render_template` to render the HTML.
+
+* Your `styles.css` file can be kept in a new folder named `/static` (you can create this folder).
+
+* Your HTML files can be kept in a new folder named `/templates` (you can create this folder).
 
 == Easter Eggs!
 
@@ -89,7 +89,8 @@ flask run --host=0.0.0.0 --port=8080
 == Takeaways
 
 * First look at **Red Hat Dev Spaces**
-* Set up a Python Flask application inside Dev Spaces
-* Leveraged Dev Spaces' quick container-based app builds
-* Utilized environment variables within your app
-* Created and accessed your first OpenShift service and route
+* Familiarize(d) yourself with setting up a Python App in Dev Spaces
+* Took advantage of 'quick build' python apps in a container
+* Using environment variables in your application
+* Used your first OpenShift Service / Route!
+
