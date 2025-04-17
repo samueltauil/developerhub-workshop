@@ -16,8 +16,6 @@ For example, auto instrumentation of .NET sends data on port `4318` using the `O
 
 *Python:* https://github.com/pkredhat/nb-workshop/tree/module5-python  
 
-*Dotnet:* https://github.com/pkredhat/nb-workshop/tree/module5-dotnet  
-
 == Objectives
 
 Inside your workspace is a Python application that listens on `/api/check` for web requests and returns an HTTP `200` or `500` status code based on the payload.
@@ -54,7 +52,7 @@ oc apply -f manifests/instrumentation.yaml
 +
 . Edit your deployment to add annotations for .NET auto instrumentation:
 +
-[source,yaml]
+[source,sh]
 ----
 oc edit deployment nb-workshop-<your username>
 ----

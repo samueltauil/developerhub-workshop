@@ -11,7 +11,7 @@
 Inside your workspace is a very simple Python application built using Flask. The application returns a “hello world” message based on the language you choose for it.
 
 . The country is based on a 2-letter country code.  
-.. i.e `countryCode=IT` returns `ciao mondo` (IT is for Italy)
+  * i.e `countryCode=IT` returns `ciao mondo` (IT is for Italy)
 . You can find all the mappings in the `translate.json` file.
 . There is also a timestamp after the “hello world” message.
 

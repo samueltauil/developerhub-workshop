@@ -60,15 +60,15 @@ https://devfile.io/docs/2.3.0/quickstart-che
 
 . Create a new topic in the producer command named `nb-today`.
 
-.. Add 7-8 messages in there.
+  * Add 7-8 messages in there.
 
 . Run the consumer command and point it to the topic `nb-today`.
 
-.. Verify that messages are funnelling through.
+  * Verify that messages are funnelling through.
 
 . Run the web application. (If you have created a run command for `main.py` you can use that)
 
-.. In the topics input, enter `nb-today` and verify the messages are funnelling through.
+  * In the topics input, enter `nb-today` and verify the messages are funnelling through.
 
 == Bonus Tasks
 
@@ -79,7 +79,7 @@ https://devfile.io/docs/2.3.0/quickstart-che
 == Easter Eggs!
 
 * There is an easter egg in the code.
-** Be thorough! Look through the code.
+* Be thorough! Look through the code.
 
 == Takeaways
 

@@ -19,7 +19,7 @@ Navigate around Developer Hub:
 . *Catalog:* Browse and manage all your apps, services, APIs, and components
 . *Create…:* Golden path software templates, where users can quickly scaffold new projects using company-approved standards
 
-.. Launch the Kafka Streaming Instance from the software templates. This will deploy an ArgoCD application and code updates in GitLab, which in turn provisions a Kafka instance that will be used in Module 3.
+  * Launch the Kafka Streaming Instance from the software templates. This will deploy an ArgoCD application and code updates in GitLab, which in turn provisions a Kafka instance that will be used in Module 3.
 
 == Easter Eggs!
 
