@@ -108,6 +108,11 @@ sh traffic-generator.sh nb-workshop-<your username>:5000
 oc start-build nb-workshop-<your username> --from-dir=.
 ----
 
+== Easter Eggs!
+
+* There is an easter egg in the code.
+* Be thorough! Look through the code.
+
 == Takeaways
 
 * Explored Kubernetes Sidecar design pattern  
